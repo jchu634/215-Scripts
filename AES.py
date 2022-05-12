@@ -57,13 +57,16 @@ def joinColumns(inputList:list):
     return row
 
 def printState(inputList:list):
+    columns = splitColumns(inputList)
+    textOutput = ",".join(getHex(columns[0]))+","+",".join(getHex(columns[1]))+","+",".join(getHex(columns[2]))+","+",".join(getHex(columns[3]))
+
     rows = splitRows(inputList)
     print(getHex(rows[0]))
     print(getHex(rows[1]))
     print(getHex(rows[2]))
     print(getHex(rows[3]))
-
-
+    print()
+    print(textOutput)
 
 
 def addRoundKey(plainText:list,roundKey:list):
