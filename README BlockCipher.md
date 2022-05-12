@@ -2,7 +2,7 @@
 ```
 python BlockCipher.py
 ```
-NOTE: keys.txt is optional
+NOTE: BlockCipherInput/keys.txt is optional
 ## Input.txt Format
 One Plaintext segment per line
 

@@ -1,7 +1,5 @@
 from os import path
-from shutil import get_terminal_size
-from platform import python_implementation
-
+from Utilities import drawLine
 def output(cipherText):
     print(hex(cipherText)[2:].upper(),end=" ")
 
@@ -51,12 +49,6 @@ def OFB(plainText,key,iv):
         output(cipherText)
         iv = midText
     print()
-
-def drawLine():
-    if python_implementation() == 'PyPy':
-        print('-' * get_terminal_size().columns)
-    else:
-        print(u'\u2500' * get_terminal_size().columns)
 
 def main():
     if path.exists("BlockCipherInput/input.txt"):
