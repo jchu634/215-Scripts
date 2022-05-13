@@ -16,7 +16,7 @@ for a in tqdm(range(1000),ascii=True):
 
         aliceS = (bobPublic**a)% p
         bobS = (alicePublic**b)% p
-        print("" + str(aliceS)+""+str(bobPublic))
+        # print("" + str(aliceS)+""+str(bobPublic))
 
         if aliceS == bobS:
             validKeys.add(aliceS)
